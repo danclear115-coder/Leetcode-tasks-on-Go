@@ -3,7 +3,9 @@ package main
 import "fmt"
 
 func strStr(haystack string, needle string) int {
+
     hLen, nLen := len(haystack), len(needle)
+	
     if nLen == 0 {
         return 0
     }
