@@ -10,11 +10,11 @@ func reverse(x int) int {
 		x = x * -1
 		isMin = true
 	}
-	
+
 	for x > 0 {
 		num := x % 10
-		result = result * 10 + num
-		x = x / 10	
+		result = result*10 + num
+		x = x / 10
 	}
 
 	if result > 2147483647 || result < -2147483648 {
@@ -26,7 +26,7 @@ func reverse(x int) int {
 	} else {
 		return result
 	}
-	
+
 }
 
 func main() {
