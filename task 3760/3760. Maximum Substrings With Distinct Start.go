@@ -2,32 +2,19 @@ package main
 
 import "fmt"
 
-func isInclude(str []string, element string) bool {
-
-	for _, strElement := range str {
-		if strElement == element {
-			return true
-		}
-	}
-
-	return false
-
-}
-
 func maxDistinct(s string) int {
 
-	checkSlice := []string{}		
-
-	for _, element := range s {
-		if !isInclude(checkSlice, string(element)) {
-			checkSlice = append(checkSlice, string(element))
-		}
+	seen := make(map[rune]struct{})
+	
+	for _, char := range s {
+		seen[char] = struct{}{}
+		fmt.Println(seen)
 	}
-
-	return len(checkSlice)
+	
+	return len(seen)
 
 }
 
 func main() {
-	fmt.Println(maxDistinct("abab"))
+	fmt.Println(maxDistinct("abc"))
 }
