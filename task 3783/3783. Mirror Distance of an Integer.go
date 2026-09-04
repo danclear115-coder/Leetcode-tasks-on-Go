@@ -20,8 +20,6 @@ func mirrorDistance(n int) int {
 	strNum := strconv.Itoa(n)
 	reverseStrNum := reverseStrNum(strNum)
 	reverseNum, err := strconv.Atoi(reverseStrNum)
-
-	fmt.Println(reverseNum, n)
 	
 	if err == nil {
         if n - reverseNum < 1 {
