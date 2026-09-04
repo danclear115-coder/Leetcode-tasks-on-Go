@@ -32,7 +32,6 @@ func mirrorDistance(n int) int {
 	result := 0
 
 	return result
-
 }
 
 func main() {
