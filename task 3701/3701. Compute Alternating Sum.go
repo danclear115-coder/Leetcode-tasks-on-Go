@@ -4,17 +4,17 @@ import "fmt"
 
 func alternatingSum(nums []int) int {
 
-	sumOfEven, sumOfNotEven := 0, 0
+	difference := 0
 
 	for i := 0; i < len(nums); i++{
 		if i%2 == 0 {
-			sumOfEven += nums[i]
+			difference += nums[i]
 		} else {
-			sumOfNotEven += nums[i]
+			difference -= nums[i]
 		}
 	}
 
-	return sumOfEven - sumOfNotEven
+	return difference
 
 }
 
